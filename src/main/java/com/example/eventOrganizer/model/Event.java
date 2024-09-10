@@ -1,18 +1,21 @@
+// STEP 2
 package com.example.eventOrganizer.model;
 
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+// @Entity adalah anotasi yang digunakan untuk memetakan tabel yang ada dalam database
 @Entity
 @Table(name = "events")
 public class Event {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Id // untuk nandain bahwa kolom ini adalah primary key
+    @GeneratedValue(strategy = GenerationType.IDENTITY) // @GeneratedValue untuk generate nilai ID secara otomatis
+    @Column(name = "id") // mengambil kolom id di table events
     private Long id;
 
-    @Column(name = "title")
+    // nullable = false berarti kolom ini tidak boleh kosong (null).
+    @Column(name = "title", nullable = false)
     private String title;
 
     @Column(name = "start_on")

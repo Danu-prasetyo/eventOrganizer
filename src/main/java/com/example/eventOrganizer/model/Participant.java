@@ -10,8 +10,9 @@ public class Participant {
     @Column(name = "id")
     private Integer id;
 
+    // Relasi Many-to-One ke entitas table events
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "event_id")
+    @JoinColumn(name = "event_id") // FK dari tabel participants
     private Event event;
 
     @Column(name = "participant_name")

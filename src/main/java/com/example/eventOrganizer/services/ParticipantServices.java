@@ -22,8 +22,8 @@ public class ParticipantServices {
         return participantRepository.findById(id);
     }
     
-    public Participant saveParticipant(Participant product) {
-        return participantRepository.save(product);
+    public Participant saveParticipant(Participant participant) {
+        return participantRepository.save(participant);
     }
     
     public void deleteParticipant(Long id) {
